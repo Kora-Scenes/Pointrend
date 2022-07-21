@@ -38,12 +38,12 @@ it = 0
 im_predmasks = []
 for imageName in sorted(glob.glob(os.path.join(path_images, '*.png'))):
     results, output = ins.segmentImage(imageName, show_bboxes=True)
-    masks = results["masks"]
-    masks = masks.transpose((2, 0, 1))
+    masks = results["masks"]                                            # Getting Masks for all classes
+    masks = masks.transpose((2, 0, 1))                             # Converting AxBxC into CxAxB to get each mask in masks into required shape of img, AxB
     c += 1
     pred_mask = np.full(masks[0].shape,False, dtype =bool)
     for j in range(len(masks)):
-        if results["class_names"][j] == 'car':
+        if results["class_names"][j] == 'car':                      # Taking index of masks only true at class 'car'
             pred_mask = np.logical_or(pred_mask,masks[j])
     im_predmasks.append(pred_mask)
     cv2.imshow('pred_mask', pred_mask.astype(np.uint8)*255)
@@ -54,7 +54,7 @@ for imageName in sorted(glob.glob(os.path.join(path_images, '*.png'))):
         break
 
 sum_IOU = 0
-sum_DSC = 0
+sum_DSC = 0                                                     # DSC = Dice_Coeff = f1_score
 for i in range(len(gt_masks)):
     gt = gt_masks[i]
     pred = im_predmasks[i]
