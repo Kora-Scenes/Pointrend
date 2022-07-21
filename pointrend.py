@@ -64,7 +64,7 @@ for i in range(len(gt_masks)):
     sum_IOU += IOU
     Dice_coeff = 2 * np.sum(intersection) / (np.sum(gt) + np.sum(pred))
     sum_DSC += Dice_coeff
-    print('IOU:',IOU, 'Dice Coeff:',Dice_coeff)
+    #print('IOU:',IOU, 'Dice Coeff:',Dice_coeff)
 
 print('IOU',sum_IOU/len(gt_masks))
 print('DSC',sum_DSC/len(gt_masks))
