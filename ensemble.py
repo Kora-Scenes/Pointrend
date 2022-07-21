@@ -1,3 +1,6 @@
+# Ensemble of Mask RCNN and Pointrend
+# Predicted Masks of 10 images KITTI semantic stored in .npy files
+
 import warnings as wr
 import glob
 import os
