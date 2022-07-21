@@ -1,6 +1,6 @@
 import numpy as np
 
-def ensemble(gt_mask, model1_mask, model2_mask):
+def ensemble(gt_mask, model1_mask, model2_mask):     #Input individual images ground truth, model 1 and model 2 masks as numpy [only for car class]
     pred_mask = np.full(gt_mask.shape,False, dtype =bool)
     pred_mask1 = np.logical_or(pred_mask,model1_mask)
     pred_mask1 = np.logical_or(pred_mask,model2_mask)
