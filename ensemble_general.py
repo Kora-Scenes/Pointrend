@@ -17,7 +17,7 @@ def ensemble(gt_mask, model1_mask, model2_mask):     #Input individual images gr
     intersection = np.logical_and(gt,pred)
     union = np.logical_or(gt,pred)
     IOU2 = np.sum(intersection) / np.sum(union)
-    Dice_coeff2 = 2 * np.sum(intersection) / (np.sum(gt) + np.sum(pred))
+    Dice_coeff2 = 2 * np.sum(intersection) / (np.sum(gt) + np.sum(pred))         # DSC = Dice_Coeff = f1_score
     
     # 2 Ensemble techniques, (IOU1, Dice_coeff1) & (IOU2, Dice_coeff2)
     # IOU1, Dice_coeff1 < IOU2, Dice_coeff2
