@@ -1,3 +1,6 @@
+# Pointrend masks and eval with ground truth
+# 10 images KITTI semantic
+
 import pixellib
 from pixellib.torchbackend.instance import instanceSegmentation
 import numpy as np
