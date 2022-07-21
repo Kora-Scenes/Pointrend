@@ -5,9 +5,6 @@ import warnings as wr
 import cv2
 import glob
 import os
-import cv2
-import numpy as np
-import warnings as wr
 
 wr.filterwarnings("ignore")
 
