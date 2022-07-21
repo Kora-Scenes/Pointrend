@@ -8,38 +8,18 @@ import numpy as np
 
 wr.filterwarnings("ignore")
 
-with open('mrcnn_masks.npy','rb') as f:
-    mrcnn_masks = np.load(f)
+# Save predicted masks (im_predmasks) in mrcnn/ptrend.npy files
+# with open('ptrend_masks.npy', 'wb') as f:
+#     np.save(f,im_predmasks)
+    
+# with open('mrcnn_masks.npy', 'wb') as f:
+#     np.save(f,im_predmasks)
+    
+with open('mrcnn_masks.npy','rb') as f: 
+    mrcnn_masks = np.load(f)   
 
 with open('ptrend_masks.npy','rb') as f:
     ptrend_masks = np.load(f)
-
-
-# print(mrcnn_masks, mrcnn_masks.shape)
-# print(ptrend_masks,ptrend_masks.shape)
-
-# models = []
-# models.append(mrcnn_masks)
-# models.append(ptrend_masks)
-# preds = [model for model in models]
-# preds = np.array(preds)
-# summed = np.sum(preds, axis = 0)
-
-# print(mrcnn_masks.shape)
-# ensemble_prediction = np.argmax(summed, axis = 1)
-# print(ensemble_prediction)
-# print(ensemble_prediction.shape)
-# cv2.imshow('ensemble',ensemble_prediction.astype(np.uint8)*255)
-# cv2.waitKey(0)
-
-# prediction1 = model1.predict_classes(X_test)
-# prediction2 = model2.predict_classes(X_test)
-
-# accuracy1 = accuracy_score(y_test, prediction1)
-# accuracy2 = accuracy_score(y_test, prediction2)
-# ensemble_accuracy = accuracy_score(y_test, ensemble_prediction)
-
-
 
 path = '/home/yln1kor/Downloads/kitti_official_semantic/training'
 path_images = path + '/image_2'
