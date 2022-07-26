@@ -1,5 +1,5 @@
 # Pointrend
-    Pointrend and ensemble, evaluation
+    Vanilla Pointrend and ensemble, evaluation
     
     
 # Missing files:
