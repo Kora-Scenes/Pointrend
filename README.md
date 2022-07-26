@@ -11,7 +11,7 @@
   
 # Dependencies:
   
-    Environment -
+    Create Environment -
     pip3 install -r requirements.txt
     
     Torch 1.9.0 - 
