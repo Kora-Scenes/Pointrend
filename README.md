@@ -16,3 +16,11 @@
     
     Torch 1.9.0 - 
     pip install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+
+# Steps:
+    
+    Install missing files
+    Install dependencies
+    Create virtual environment
+    python3 pointrend.py        To run pointrend
